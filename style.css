@@ -45,7 +45,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: 400;
+    font-weight: 700;
 }
 
 #rating-card h1 {
@@ -74,6 +74,7 @@ body {
 
 #rating-card ul li.selected {
     background-color: var(--White);
+    color: var(--Grey-900);
 }
 
 #rating-card button {
