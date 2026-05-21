@@ -1,0 +1,151 @@
+:root {
+    --Orange-500: hsl(25, 97%, 53%);
+    --White: hsl(0, 100%, 100%);
+    --Grey-500: hsl(217, 12%, 63%);
+    --Grey-900: hsl(213, 19%, 18%);
+    --Grey-950: hsl(216, 12%, 8%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---------- Mobile-first ---------- */
+body {
+    min-height: 100vh;
+    background-color: var(--Grey-950);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Overpass', sans-serif;
+    font-size: 15px;
+}
+
+#container {
+    max-width: 350px;
+    background-color: var(--Grey-900);
+    border-radius: 1rem;
+    padding: 2rem 1.5rem;
+}
+
+#rating-card {
+    display: flex;
+    flex-direction: column;
+}
+
+#logo,
+#rating-card ul li {
+    width: 40px;
+    height: 40px;
+    background-color: hsl(216, 13%, 23%);
+    color: var(--Grey-500);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+}
+
+#rating-card h1 {
+    color: var(--White);
+    margin: 1.5rem 0;
+}
+
+#rating-card p {
+    color: var(--Grey-500);
+    margin-bottom: 1.5rem;
+    line-height: 1.5rem;
+}
+
+#rating-card ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+#rating-card ul li:hover {
+    background-color: var(--Orange-500);
+    color: var(--Grey-950);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#rating-card ul li.selected {
+    background-color: var(--White);
+}
+
+#rating-card button {
+    width: 100%;
+    border: none;
+    padding: 0.8rem 0;
+    border-radius: 25px;
+    background-color: var(--Orange-500);
+    color: var(--Grey-900);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 1.5rem;
+    cursor: pointer;
+}
+
+#rating-card button:hover {
+    background-color: var(--White);
+    transition: all 0.3s ease;
+}
+
+/* ---------- Thank you state ---------- */
+#thankyou-card {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#selected-rating-msg {
+    background-color: hsl(216, 13%, 23%);
+    color: var(--Orange-500);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    margin: 1.5rem 0;
+}
+
+#thankyou-card h1 {
+    color: var(--White);
+    margin-bottom: 1.5rem;
+}
+
+#thankyou-card>p {
+    color: var(--Grey-500);
+    line-height: 1.3rem;
+}
+
+
+/* ---------- Desktop Responsive ---------- */
+@media screen and (min-width: 768px) {
+    #container {
+        max-width: 400px;
+        padding: 2rem;
+        border-radius: 2rem;
+    }
+
+    #rating-card h1 {
+        font-size: 28px;
+        margin: 2rem 0 0.5rem 0;
+    }
+
+    #logo,
+    #rating-card ul li {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* ----- Thank you state ----- */
+    #thankyou-card h1 {
+        font-size: 28px;
+        margin: 1rem;
+    }
+
+}
